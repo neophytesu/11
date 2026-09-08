@@ -28,7 +28,7 @@ jobs:
               "msgtype": "markdown",
               "markdown": {
                 "title": "定时通知",
-                "text": "### 定时通知\n\n- 仓库：'"${{ github.repository }}"'\n- 时间：'"$(date '+%Y-%m-%d %H:%M:%S')"'\n\n> 来自 GitHub Actions"
+                "text": "### 定时通知\n\n- 时间：'"$(date '+%Y-%m-%d %H:%M:%S')"'\n\n>"
               }
             }')
 
