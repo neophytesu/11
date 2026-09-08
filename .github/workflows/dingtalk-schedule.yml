@@ -13,7 +13,6 @@ jobs:
         env:
           DINGTALK_ACCESS_TOKEN: ${{ secrets.DINGTALK_ACCESS_TOKEN }}
           DINGTALK_SECRET: ${{ secrets.DINGTALK_SECRET }}
-          AT_MOBILE_1: ${{ secrets.DINGTALK_AT_MOBILE_1 }}
         run: |
           export TZ=Asia/Shanghai
           TIMESTAMP=$(date +%s%3N)
@@ -30,11 +29,10 @@ jobs:
               \"msgtype\": \"markdown\",
               \"markdown\": {
                 \"title\": \"定时通知\",
-                \"text\": \"两位小伙伴 @${AT_MOBILE_1}，今天下班前或者明天上午发下手头的工作内容和进度。已提测的确认下测试排期和进度\"
+                \"text\": \"@所有人 两位小伙伴，今天下班前或者明天上午发下手头的工作内容和进度。已提测的确认下测试排期和进度\"
               },
               \"at\": {
-                \"atMobiles\": [\"${AT_MOBILE_1}\", \"${AT_MOBILE_2}\"],
-                \"isAtAll\": false
+                \"isAtAll\": true
               }
             }")
 
